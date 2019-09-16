@@ -1,4 +1,8 @@
 {
     "python.pythonPath": "venv/bin/python",
-    "python.testing.unittestEnabled": true
+    "python.testing.unittestEnabled": true,
+    "python.linting.flake8Enabled": true,
+    "python.linting.flake8Args": [
+        "--max-line-length=119"
+    ]
 }
