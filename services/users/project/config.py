@@ -6,6 +6,8 @@ class BaseConfig:
     TESTING = False
     SECRET_KEY = 'my_precious'
     SQLALCHEMY_TRACK_MODIFICATIONS = False
+    DEBUG_TB_ENABLED = False
+    DEBUG_TB_INTERCEPT_REDIRECTS = False
 
 
 class DevelopmentConfig(BaseConfig):
@@ -13,6 +15,7 @@ class DevelopmentConfig(BaseConfig):
     SQLALCHEMY_DATABASE_URI = os.getenv(
         'DATABASE_URL', 'postgres://postgres:postgres@127.0.0.1:5435/users_dev'
     )
+    DEBUG_TB_ENABLED = True
 
 
 class TestingConfig(BaseConfig):
